@@ -1,0 +1,19 @@
+<!-- <div *ngFor="let item of menu">
+  {{ item.object_id }} &nbsp; {{ item.ID }} &nbsp; {{ item.title }}
+  <span *ngIf="item.child_items">
+    <ul>
+      <li *ngFor="let childitem of item.child_items">
+        {{ childitem.object_id }} &nbsp; {{ childitem.ID }}
+          &nbsp; {{ childitem.title }}
+      </li>
+    </ul>
+  </span>
+</div> -->
+<div>
+  {{ menu?.ID }} &nbsp; {{ menu?.object_id }} &nbsp; {{ menu?.title }}
+  <ul>
+    <li *ngFor="let item of menu?.child_items">
+      {{ item.object_id }} &nbsp; {{ item.title }}
+    </li>
+  </ul>
+</div>

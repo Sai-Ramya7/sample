@@ -1,0 +1,30 @@
+<h3>{{ menu?.name }}</h3>
+<!-- <p>
+  {{menu?.items | json}}
+</p> -->
+<ul *ngFor="let item of menu?.items; index as i">
+  <li (click)="childItems(i)">
+    <!-- <a routerLink="{{item?.object_id}}"> -->
+      {{ item?.title }}
+    <!-- </a> -->
+  </li>
+  <div *ngIf="click">
+    <ul *ngFor="let childItem of item.child_items">
+      <li (click)="citem(childItem)">
+        {{ childItem.title }}
+      </li> 
+      <span *ngFor="let citem of citems?.child_items">
+        {{ citem.title }}
+      </span>
+    </ul>
+  </div>
+</ul>
+<div *ngIf="citems?.child_items">
+  <ul *ngFor="let citem of citems?.child_items">
+    <li>
+      {{ citem.title }}
+    </li>
+  </ul>
+</div>
+
+<!-- netflix ---- http://127.0.0.1:4200/ -->

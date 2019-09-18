@@ -1,0 +1,59 @@
+<ul>
+  <li *ngFor="let item of menu; index as i">
+    <span *ngIf="item.object === 'post'">
+        <!-- routerLink="posts/{{item.object_id}}"  -->
+      <a 
+      (click)="post(item.object_id)">
+        {{ item.title }}
+      </a>
+    </span>
+    <span *ngIf="item.object === 'page'">
+      <a routerLink="pages/{{item.object_id}}" (click)="ind(i)">
+        {{ item.title }}
+      </a>
+    </span>
+    <span *ngIf="item.object === 'category'">
+      <a routerLink="categories/{{item.object_id}}" (click)="ind(i)">
+        {{ item.title }}
+      </a>
+    </span>
+  </li>
+</ul>
+<!-- <ul>
+  <li *ngFor="let item of menu; index as i">
+    <span [ngSwitch]="item.object">
+      <p *ngSwitchCase="page">
+        <a routerLink="pages/{{item.object_id}}" (click)="ind(i)">
+          {{ item.title }}
+        </a>
+      </p>
+      <p *ngSwitchCase="post">
+        <a routerLink="posts/{{item.object_id}}" (click)="ind(i)">
+          {{ item.title }}
+        </a>
+      </p>
+      <p *ngSwitchDefault>
+        <a routerLink="categories/{{item.object_id}}" (click)="ind(i)">
+          {{ item.title }}
+        </a>
+      </p>
+    </span>
+  </li>
+</ul> -->
+<!-- <ul *ngFor="let item of menu; index as i">
+  <li *ngIf="{{item.object}} === 'category'">
+    <a routerLink="categories/{{item.object_id}}" (click)="ind(i)">
+      {{ item.title }}
+    </a>
+  </li>
+  <li *ngIf="{{item.object}} === 'page'">
+      <a routerLink="pages/{{item.object_id}}" (click)="ind(i)">
+        {{ item.title }}
+      </a>
+  </li>
+  <li *ngIf="{{item.object}} === 'post'">
+      <a routerLink="posts/{{item.object_id}}" (click)="ind(i)">
+        {{ item.title }}
+      </a>
+  </li>
+</ul> -->

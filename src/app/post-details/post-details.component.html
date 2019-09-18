@@ -1,0 +1,19 @@
+<div class="container">
+  <h3>{{ postDetails?.title.rendered }}</h3>
+  <span>Image:
+    <div [innerHtml]="postDetails?.content.rendered"
+    width="150px" height="150px"></div>
+  </span>
+  <div *ngIf="postDetails?.fimg_url">
+    <span>Featured_image:
+      <br>
+      <img src="{{ postDetails?.fimg_url }}" alt="img">
+    </span>
+  </div>
+  <span>Excerpt:
+    <div [innerHtml]="postDetails?.excerpt.rendered"></div>
+  </span>
+  <span>Created Date: {{ postDetails?.date }}</span>
+  <br>
+  <span>Updated Date: {{ postDetails?.modified }}</span>
+</div>

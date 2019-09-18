@@ -1,0 +1,24 @@
+<ul>
+  <li *ngFor="let menu of menus">{{ menu | json }}</li>
+</ul>
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>MenuName</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let menu of menus">
+        <td>
+          <a routerLink="{{menu.term_id}}">
+            {{ menu.term_id }}
+          </a>
+        </td>
+        <td>{{ menu.name }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

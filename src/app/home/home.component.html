@@ -1,0 +1,34 @@
+<!-- <button (click)="getAllPosts()">Fetch all posts</button>
+<ul *ngIf="click">
+  <li *ngFor="let post of posts">{{post | json}}</li>
+</ul>
+<div class="container">
+  <table *ngIf="click" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Category</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let post of posts">
+        <td>{{ post.id }}</td>
+        <td>{{ post.title.rendered }}</td>
+        <td>{{ post.categories }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+
+<button (click)="getAllCategories()">Fetch Categories</button>
+
+<ul *ngFor="let category of categories">
+  <li>
+    <!-- <a routerLink="/category/{{category.id}}" -->
+    <a [routerLink]="['/category/', category.id]"
+    routerLinkActive="active">{{ category.name }}</a>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>
