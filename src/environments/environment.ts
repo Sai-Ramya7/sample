@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  commonurl : 'http://localhost/wordpress/wp-json/',
+  // commonurl : 'http://localhost/wordpress/wp-json/',
 };
 
 /*

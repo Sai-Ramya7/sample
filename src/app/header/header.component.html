@@ -2,7 +2,7 @@
   <li *ngFor="let item of menu; index as i">
     <span *ngIf="item.object === 'post'">
         <!-- routerLink="posts/{{item.object_id}}"  -->
-      <a 
+      <a routerLink="posts/{{item.object_id}}"
       (click)="post(item.object_id)">
         {{ item.title }}
       </a>

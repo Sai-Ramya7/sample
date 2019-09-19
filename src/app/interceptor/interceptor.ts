@@ -11,7 +11,7 @@ export class NoopInterceptor implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler):
     Observable<HttpEvent<any>> {
       const commonReq = req.clone({
-          url: environment.commonurl + req.url
+          // url: environment.commonurl + req.url
       });
       return next.handle(commonReq);
   }
