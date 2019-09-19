@@ -1,6 +1,6 @@
 <h3>{{ menu?.name }}</h3>
 <!-- <p>
-  {{menu?.items | json}}
+  {{ menu?.items | json }}
 </p> -->
 <ul *ngFor="let item of menu?.items; index as i">
   <li (click)="childItems(i)">
@@ -13,18 +13,24 @@
       <li (click)="citem(childItem)">
         {{ childItem.title }}
       </li> 
-      <span *ngFor="let citem of citems?.child_items">
-        {{ citem.title }}
-      </span>
+      <div *ngIf="citems?.child_items && cclick">
+        <ul>
+          <li *ngFor="let citem of citems?.child_items">
+            {{ citem.title }}
+          </li>
+        </ul>
+      </div>
     </ul>
   </div>
 </ul>
-<div *ngIf="citems?.child_items">
+<!-- <div *ngIf="citems?.child_items">
   <ul *ngFor="let citem of citems?.child_items">
     <li>
       {{ citem.title }}
     </li>
   </ul>
-</div>
+</div> -->
 
-<!-- netflix ---- http://127.0.0.1:4200/ -->
+<!-- netflix ---- http://127.0.0.1:4200/ 
+/home/zestard4/.gitconfig 
+-->

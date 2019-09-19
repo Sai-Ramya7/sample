@@ -12,7 +12,9 @@ export class MenuDetailsComponent implements OnInit {
   menu;
   menuItem;
   citems;
+  gcItems;
   click = false;
+  cclick = false;
 
   constructor(private service: ConfigService,
               private route: ActivatedRoute) { }
@@ -38,6 +40,8 @@ export class MenuDetailsComponent implements OnInit {
   citem(childItem) {
     console.log('ccitem', childItem);
     this.citems = childItem;
+    this.cclick = true;
+    this.gcItems = childItem.child_items;
+    console.log('gc', this.gcItems);
   }
-
 }
