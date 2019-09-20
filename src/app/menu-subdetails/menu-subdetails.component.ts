@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ConfigService } from '../config.service';
-import { isRootView } from '@angular/core/src/render3/util';
+// import { isRootView } from '@angular/core/src/render3/util';
 
 @Component({
   selector: 'app-menu-subdetails',
