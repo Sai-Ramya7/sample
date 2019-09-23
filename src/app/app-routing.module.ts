@@ -14,13 +14,19 @@ import { PageDetailsComponent } from './page-details/page-details.component';
 
 const routes: Routes = [
   // { path: '', component: HeaderComponent, pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'home/posts', component: PostsComponent },
-  { path: 'home/categories', component: CategoriesComponent },
-  { path: 'home/pages', component: PagesComponent },
-  { path: 'home/posts/:id', component: PostDetailsComponent },
-  { path: 'home/categories/:id', component: CategoryDetailsComponent },
-  { path: 'home/pages/:id', component: PageDetailsComponent },
+  { path: 'home', component: HomeComponent,
+    children: [
+      { path: 'posts', component: PostsComponent },
+      { path: 'posts/:id', component: PostDetailsComponent },
+
+      { path: 'categories', component: CategoriesComponent },
+      { path: 'categories/:id', component: CategoryDetailsComponent },
+
+      { path: 'pages', component: PagesComponent },
+      { path: 'pages/:id', component: PageDetailsComponent },
+
+    ]
+  },
   { path: 'category/:id', component: CategoriesComponent },
   { path: 'menus', component: MenusComponent },
   { path: 'menus/:id', component: MenuDetailsComponent },
