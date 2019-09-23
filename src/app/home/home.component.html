@@ -1,34 +1,30 @@
-<!-- <button (click)="getAllPosts()">Fetch all posts</button>
-<ul *ngIf="click">
-  <li *ngFor="let post of posts">{{post | json}}</li>
-</ul>
-<div class="container">
-  <table *ngIf="click" class="table table-striped">
-    <thead>
-      <tr>
-        <th>Id</th>
-        <th>Title</th>
-        <th>Category</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let post of posts">
-        <td>{{ post.id }}</td>
-        <td>{{ post.title.rendered }}</td>
-        <td>{{ post.categories }}</td>
-      </tr>
-    </tbody>
-  </table>
+<div class="container-fluid">
+    <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+        <nav class="navbar navbar-expand-lg scrolling-navbar">
+            <ul class="list-unstyled">
+                <li>
+                    <a routerLink = "/home/posts">Posts</a>
+                </li>
+                <li>
+                    <a routerLink = "/home/categories">Categories</a>
+                </li>
+                <li>
+                    <a routerLink = "/home/pages">Pages</a>
+                </li>
+            </ul>
+        </nav>
+    </div> 
+</div>
+<!-- <div>
+    <div>
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <nav class="collapse bd-links">
+                <div class="bd-toc-item" id="bd-tocs-nav">
+                    <a class="bd-toc-item" routerLink = "/posts">
+                        Posts
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
 </div> -->
-
-<button (click)="getAllCategories()">Fetch Categories</button>
-
-<ul *ngFor="let category of categories">
-  <li>
-    <!-- <a routerLink="/category/{{category.id}}" -->
-    <a [routerLink]="['/category/', category.id]"
-    routerLinkActive="active">{{ category.name }}</a>
-  </li>
-</ul>
-
-<router-outlet></router-outlet>

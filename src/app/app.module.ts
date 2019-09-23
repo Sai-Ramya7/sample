@@ -11,6 +11,8 @@ import { MenusComponent } from './menus/menus.component';
 import { MenuDetailsComponent } from './menu-details/menu-details.component';
 import { MenuSubdetailsComponent } from './menu-subdetails/menu-subdetails.component';
 import { HeaderComponent } from './header/header.component';
+import { PostsComponent } from './posts/posts.component';
+import { PagesComponent } from './pages/pages.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { HeaderComponent } from './header/header.component';
     MenusComponent,
     MenuDetailsComponent,
     MenuSubdetailsComponent,
-    HeaderComponent
+    HeaderComponent,
+    PostsComponent,
+    PagesComponent
   ],
   imports: [
     BrowserModule,

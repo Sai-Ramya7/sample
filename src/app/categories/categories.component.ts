@@ -17,12 +17,13 @@ export class CategoriesComponent implements OnInit {
 
   ngOnInit() {
     this.catposts();
+    this.getAllCategories();
   }
 
   getAllCategories() {
     this.click = true;
     this.service.getAllCategories().subscribe((result: any) => {
-      console.log(result);
+      console.log('cat', result);
       this.categories = result;
     });
   }

@@ -32,4 +32,7 @@ export class ConfigService {
   getcategoryById(id) {
     return this.http.get(`http://localhost/wordpress/wp-json/wp/v2/categories/${id}`);
   }
+  getAllPages() {
+    return this.http.get('http://localhost/wordpress/wp-json/wp/v2/pages');
+  }
 }

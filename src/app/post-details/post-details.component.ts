@@ -23,7 +23,7 @@ export class PostDetailsComponent implements OnInit {
     console.log('post Id:', id);
     this.service.getPostById(id).subscribe((result: any) => {
       this.postDetails = result;
-      console.log(result);
+      console.log('post-details:', this.postDetails);
     });
   }
 }

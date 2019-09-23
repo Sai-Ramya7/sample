@@ -1,0 +1,19 @@
+<div class="container">
+    <h3>Pages</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Page Id</th>
+                <th>Page Name</th>
+                <!-- <th>Parent Page Id</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let page of pages">
+                <td>{{ page.id }}</td>
+                <td>{{ page.title.rendered }}</td>
+                <!-- <td>{{ page.parent }}</td> -->
+            </tr>
+        </tbody>
+    </table>
+</div>

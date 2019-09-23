@@ -1,13 +1,15 @@
 <div class="container">
-  <h3>{{ postDetails?.title.rendered }}</h3>
-  <span>Image:
-    <div [innerHtml]="postDetails?.content.rendered"
-    width="150px" height="150px"></div>
-  </span>
+  <h3>{{ postDetails?.title.rendered }} post details</h3>
   <div *ngIf="postDetails?.fimg_url">
     <span>Featured_image:
       <br>
       <img src="{{ postDetails?.fimg_url }}" alt="img">
+    </span>
+  </div>
+  <div *ngIf="postDetails?.content.rendered">
+    <span>Image:
+      <div [innerHtml]="postDetails?.content.rendered"
+      width="150px" height="150px"></div>
     </span>
   </div>
   <span>Excerpt:
