@@ -10,7 +10,11 @@
     </thead>
     <tbody>
       <tr *ngFor="let category of categories">
-        <td>{{ category.id }}</td>
+        <td>
+          <a routerLink="/home/categories/{{ category.id }}">
+            {{ category.id }}
+          </a>
+        </td>
         <td>{{ category.name }}</td>
         <td>{{ category.count }}</td>
       </tr>

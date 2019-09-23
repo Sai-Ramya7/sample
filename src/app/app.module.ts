@@ -13,6 +13,8 @@ import { MenuSubdetailsComponent } from './menu-subdetails/menu-subdetails.compo
 import { HeaderComponent } from './header/header.component';
 import { PostsComponent } from './posts/posts.component';
 import { PagesComponent } from './pages/pages.component';
+import { CategoryDetailsComponent } from './category-details/category-details.component';
+import { PageDetailsComponent } from './page-details/page-details.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { PagesComponent } from './pages/pages.component';
     MenuSubdetailsComponent,
     HeaderComponent,
     PostsComponent,
-    PagesComponent
+    PagesComponent,
+    CategoryDetailsComponent,
+    PageDetailsComponent
   ],
   imports: [
     BrowserModule,

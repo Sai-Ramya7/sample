@@ -1,0 +1,27 @@
+<div class="container">
+    <h3>{{ pageDetails?.title.rendered }} page details</h3>
+    <div *ngIf="pageDetails?.fimg_url">
+        <span>Featured_image:
+        <br>
+        <img src="{{ pageDetails?.fimg_url }}" alt="img">
+        </span>
+    </div>
+    <div *ngIf="pageDetails?.content.rendered">
+        <span>Image:
+        <div [innerHtml]="pageDetails?.content.rendered"
+        width="150px" height="150px"></div>
+        </span>
+    </div>
+    <div *ngIf="pageDetails?.parent !== 0">
+        <span>Parent id: {{ pageDetails?.parent }}</span>
+    </div>
+    <div *ngIf="pageDetails?.excerpt.rendered !== ''">
+        <span>Excerpt:
+            <div [innerHtml]="pageDetails?.excerpt.rendered"></div>
+        </span>
+    </div>
+    <span>Created Date: {{ pageDetails?.date }}</span>
+    <br>
+    <span>Updated Date: {{ pageDetails?.modified }}</span>
+</div>
+      

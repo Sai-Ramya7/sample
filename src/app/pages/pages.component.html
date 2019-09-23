@@ -10,7 +10,11 @@
         </thead>
         <tbody>
             <tr *ngFor="let page of pages">
-                <td>{{ page.id }}</td>
+                <td>
+                    <a routerLink="/home/pages/{{page.id}}">
+                        {{ page.id }}
+                    </a>
+                </td>
                 <td>{{ page.title.rendered }}</td>
                 <!-- <td>{{ page.parent }}</td> -->
             </tr>

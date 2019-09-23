@@ -1,0 +1,7 @@
+<div class="container">
+    <h3>category {{ categoryDetails?.name }} details</h3>
+    <span>id: {{ categoryDetails?.id }}</span>
+    <div *ngIf="categoryDetails?.parent !== 0">
+        <span>Parent id: {{ categoryDetails?.parent }}</span>
+    </div>
+</div>
