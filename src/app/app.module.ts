@@ -15,6 +15,8 @@ import { PostsComponent } from './posts/posts.component';
 import { PagesComponent } from './pages/pages.component';
 import { CategoryDetailsComponent } from './category-details/category-details.component';
 import { PageDetailsComponent } from './page-details/page-details.component';
+import { CareersComponent } from './careers/careers.component';
+import { CareerDetailsComponent } from './career-details/career-details.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { PageDetailsComponent } from './page-details/page-details.component';
     PostsComponent,
     PagesComponent,
     CategoryDetailsComponent,
-    PageDetailsComponent
+    PageDetailsComponent,
+    CareersComponent,
+    CareerDetailsComponent
   ],
   imports: [
     BrowserModule,

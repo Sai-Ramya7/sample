@@ -11,10 +11,12 @@ import { PostDetailsComponent } from './post-details/post-details.component';
 import { PostsComponent } from './posts/posts.component';
 import { CategoryDetailsComponent } from './category-details/category-details.component';
 import { PageDetailsComponent } from './page-details/page-details.component';
+import { CareersComponent } from './careers/careers.component';
+import { CareerDetailsComponent } from './career-details/career-details.component';
 
 const routes: Routes = [
   // { path: '', component: HeaderComponent, pathMatch: 'full' },
-  { path: 'home', component: HomeComponent,
+  { path: '', component: HomeComponent,
     children: [
       { path: 'posts', component: PostsComponent },
       { path: 'posts/:id', component: PostDetailsComponent },
@@ -25,6 +27,8 @@ const routes: Routes = [
       { path: 'pages', component: PagesComponent },
       { path: 'pages/:id', component: PageDetailsComponent },
 
+      { path: 'careers', component: CareersComponent },
+      { path: 'careers/:id', component: CareerDetailsComponent }
     ]
   },
   { path: 'category/:id', component: CategoriesComponent },
