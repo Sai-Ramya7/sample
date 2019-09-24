@@ -16,7 +16,7 @@ import { CareerDetailsComponent } from './career-details/career-details.componen
 
 const routes: Routes = [
   // { path: '', component: HeaderComponent, pathMatch: 'full' },
-  { path: '', component: HomeComponent,
+  { path: 'home', component: HomeComponent,
     children: [
       { path: 'posts', component: PostsComponent },
       { path: 'posts/:id', component: PostDetailsComponent },
